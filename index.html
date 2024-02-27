@@ -1,352 +1,637 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-
+<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="format-detection" content="email=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="renderer" content="webkit">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>长风的个人简历</title>
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/typo.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <script>
-        function loading() {
-            document.getElementsByClassName('avatar')[0].style.display = 'block';
-            document.getElementsByClassName('loading')[0].style.display = 'none';
-        }
-    </script>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+.footer {
+  width: 100%;
+  margin-top: 1rem;
+  height: 2rem; }
+  .footer p {
+    line-height: 2rem;
+    text-align: center;
+    font-size: 0.8rem; }
+
+
+
+</style><title>长风的个人简历</title>
 </head>
-
 <body onContextMenu="alert('嘿，我看到你了！'); return false" NOOP="if (window.event != null && window.event.button == 2) alert ('Thanks...');">
-
-<body>
-
-    <header class="header">
+<body class='typora-export os-windows'><div class='typora-export-content'>
+	<header class="header">
 	  <audio autoplay>
 	  <source src="https://api.uomg.com/api/rand.music?sort=热歌榜" type="audio/mpeg">
 	  </audio>
     </header>
-
-    <article class="container">
-        <section class="side" id="side">
-
-
-
-
-
-
-            <!-- 个人肖像 -->
-            <section class="me">
-                <section class="portrait">
-                    <!--<div class="loading">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <img src="./assets/images/avatar.jpg">
-                    </div>-->
-                    <!-- 头像照片 -->
-                    <img src="./assets/images/photo.jpg">
-	               <!-- <img src="./assets/images/wechat.png" style="width: 100%;" alt="">-->
-                    <!--<img src="https://gitee.com/myself_14/other-file/blob/master/1%E5%AF%B8(%E8%93%9D).jpg">-->
-                </section>
-
-                <h1 class="name">长风</h1>
-				<br>
-                <h4 class="info-job">区块链开发 / Java开发</h4>
-
-            </section>
-
-            <!-- 基本信息 -->
-            <section class="profile info-unit">
-                <h2>
-                    <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
-                <hr/>
-                <ul>
-                    <li>
-                        <label>我是谁</label>
-                        <span>长风</span>
-                    </li>
-                    <li>
-                        <label>性别</label>
-                        <span>男</span>
-                    </li>
-                    <li>
-                        <label>生日</label>
-                        <span>1998.09</span>
-                    </li>
-                    <li>
-                        <label>籍贯</label>
-                        <span>江苏 扬州</span>
-                    </li>
-                    <li>
-                        <label>英语水平</label>
-                        <span>CET-6</span>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- 联系方式 -->
-            <section class="contact info-unit">
-                <h2>
-                    <i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2>
-                <hr/>
-                <ul>
-                    <li>
-                        <label>手机</label>
-                        <a href="tel:15050795520" target="_blank">15050795520</a>
-                    </li>
-                    <li>
-                        <label>邮箱</label>
-                        <a href="mailto:1213931354@qq.com" target="_blank">1213931354@qq.com</a>
-                    </li>
-                    <li>
-                        <label>CSDN</label>
-                        <a href="https://blog.csdn.net/u014292402" target="_blank">小杰s的个人博客</a>
-                    </li>
-                    <li>
-                        <label>Gitee</label>
-                        <a href="https://gitee.com/agulator" target="_blank">长风的个人主页</a>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- 技能点 -->
-            <!--<section class="skill info-unit">
-                <h2>
-                    <i class="fa fa-code" aria-hidden="true"></i>技能点</h2>
-                <hr/>
-                <ul>
-                    <li>
-                        <label>Solidity</label>
-                        <progress value="90" max="100"></progress>
-                    </li>
-                    <li>
-                        <label>Java</label>
-                        <progress value="85" max="100"></progress>
-                    </li>
-                    <li>
-                        <label>Linux</label>
-                        <progress value="85" max="100"></progress>
-                    </li>
-                    <li>
-                        <label>Fisco Bcos</label>
-                        <progress value="85" max="100"></progress>
-                    </li>
-                    <li>
-                        <label>Linux</label>
-                        <progress value="70" max="100"></progress>
-                    </li>
-                    <li>
-                        <label>小程序</label>
-                        <progress value="70" max="100"></progress>
-                    </li>
-                </ul>
-            </section>-->
-
-            <section class="qrcode info-unit">
-                <h2><i class="fa fa-qrcode" aria-hidden="true"></i>我的微信</h2>
-                <hr/>
-                <img src="./assets/images/wechat.png" style="width: 100%;" alt="">
-            </section>
-
-             <!--技术栈 -->
-             <div class="stack info-unit">
-                    <h2><i class="fa fa-code" aria-hidden="true"></i>个人技能</h2>
-                    <hr/>
-                    <ul>
-                        <li>
-                            <label>区块链</label>
-                            <span>Fisco Bcos、Stellar、Hyperledger Fabric</span>
-                        </li>
-                        <li>
-                            <label>后端</label>
-                            <span>Java</span>
-                        </li>
-                        <li>
-                            <label>其他</label>
-                            <span>Linux、Git、Mysql</span>
-                        </li>
-                    </ul>
-                </div> 
-        </section>
-
-        <section class="main">
-
-            <!-- 教育经历 -->
-            <section class="edu info-unit">
-                <h2>
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2>
-                <hr/>
-                <ul>
-                    <li>
-                        <h3>
-	                        <mark>硕士研究生</mark>	
-                            <span>青岛理工大学 - 电子信息（专业）- 区块链（研究方向）</span>
-                            <time>2020.09 - 2023.07</time>
-                        </h3>
-                        <p>
-	                        <ul class="info-content">
-	                            <li><mark><a href="#" target="_blank">研一</a></mark>参加 2021 华为区块链高校大赛获得最佳商业模型奖</li>
-	                            <li><mark><a href="#" target="_blank">研二</a></mark>在青岛海创链公司实习，为山东省公共资源交易中心开发链上存证系统</li>
-	                        </ul>
-                        </p>
-                    </li>
-                    <li>
-                        <h3>
-	                        <mark>本科</mark>
-                            <span>南通大学 - 网络工程（专业）</span>
-                            <time>2016.09 - 2020.07</time>
-                        </h3>
-                        <p>
-                        	<ul class="info-content">
-	                            <li><mark><a href="#" target="_blank">大一</a></mark>担任院学生会监察部委员，取得 CET-4 证书</li>
-	                            <li><mark><a href="#" target="_blank">大二</a></mark>担任院学生会监察部副部长，取得 CET-6 证书</li>
-	                            <li><mark><a href="" target="_blank">大三</a></mark>担任南通大学就业中心助理，参加南通大学 SYB 创业培训班，参与学生创业项目</li>
-	                        </ul>
-                        </p>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- 实习经历 -->
-            <section class="work info-unit">
-                <h2>
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>实习经历</h2>
-                <hr/>
-                <ul>
-                    <li>
-                        <h3>
-                            <span>海创链(青岛)信息科技有限公司</span>
-                            <time>2021.08 - 2022.08</time>
-                        </h3>
-                        <ul class="info-content">
-	                        <li>
-		                        <mark>[项目名称]</mark><br>
-			                    链上存证系统    
-	                        </li>
-                            <li>
-	                            <mark>[项目描述]</mark><br>
-                           		为山东省公共资源交易中心开发的区块链项目，由省中心和 16 个地市的服务器组成一个网络，区块链节点运行在省中心和地市的服务器上，主要实现整个山东省政府采购信息的数据链上存证。
-                             </li>
-                            <li>
-	                            <mark>[主要负责]</mark><br>
-								<ul class="info-content-detial" style="list-style-type:square">
-									<li>Linux 服务器环境的搭建（配置 JDK、Mysql、Nginx、防火墙端口开放等）</li>
-									<li>区块链节点的生成与部署、节点组织机构的划分、节点通讯列表的维护</li>
-									<li>Solidity 智能合约的开发、测试与部署（可以按表存储省中心和各地市的数据、区分数据来源、统计各地市和表的上链数据量）</li>
-									<li>数据上链的 Java 后端接口开发、测试与部署（从 Mysql、SqlServer 数据库分页抓取数据，通过区块链 SDK 调用智能合约将数据上链，省中心数据上链后将 Hash 回传至数据库）</li>
-									<li>与前端对接项目管理后台可视化界面的接口、修改管理后台的部分功能（跨域的配置、接口传参的修改）</li>
-									<li>对接各个地市、协助地市数据上链接口的调试、打通地市网络通讯</li>
-								</ul>
-                            </li>
-                            <li><mark>[使用技术]</mark><br>
-                            		Linux、Fisco Bcos、Solidity、Java、SpringBoot、Mysql
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- 项目经验 -->
-            <section class="project info-unit">
-                <h2>
-                    <i class="fa fa-terminal" aria-hidden="true"></i>其它项目</h2>
-                <hr/>
-                <ul>
-                    <li>
-                        <h3>
-                            <span>基于区块链的医疗电子票据报销系统</span>
-                            <span class="link">
-                                <a ="https://competition.huaweicloud.com/information/1000041404/html10" target="_blank">奖项</a>
-                            </span>
-                            <time>2021.04 - 2021.07</time>
-                        </h3>
-                        <ul class="info-content">
-							<li>2021华为区块链高校大赛获最佳商业模型奖</li>
-                            <li>
-	                            <mark>[项目描述]</mark><br>
-								链上有医院、政府、银行三类机构节点。患者可以注册账号，就诊后由医院开出账单，账单上链存储，同时政府确认患者是否有缴纳医保，根据账单按照患者缴纳的医保等级确认报销费用，确认完成后由银行将报销的费用交付到患者的银行账户上，同时链上记录本次报销完成。数据上链确保数据不会被篡改，无法伪造票据，报销后记录链上所有节点都可查，避免一票多报的情况。
-                             </li>
-							<li>
-	                            <mark>[主要负责]</mark><br>
-								<ul class="info-content-detial" style="list-style-type:square">
-									<li>项目组织架构的设计与划分</li>
-									<li>Java后端和链码的开发与调试</li>
-									<li>与前端对接后端接口</li>
-								</ul>
-                            </li>
-							<li><mark>[使用技术]</mark><br>
-                            		Java、华为区块链、NodeJS
-                            </li>
-
-                        </ul>
-
-                    </li>
-                    <li>
-                        <h3>
-                            <span>果园水果直销网站</span>
-                            <!--<span class="link">
-                                <a href="#" target="_blank">Demo</a>
-                            </span>-->
-                            <time>2020.01 - 2020.04</time>
-                        </h3>
-                        <ul class="info-content">
-                           	<li>本科毕业设计</li>
-                            <li>
-	                            <mark>[项目描述]</mark><br>
-								模拟京东网站的线上购物流程，实现用户可以注册、登录自己的账号，浏览商城内的商品，点击商品能够进入商品详情页面，以及选购商品加入购物车，用户在下单时也会产生对应的购物订单。并且建立后台的信息管理系统，用户可以查看他们的购物记录。
-                             </li>
-							<li>
-	                            <mark>[主要负责]</mark><br>
-								<ul class="info-content-detial" style="list-style-type:square">
-									<li>前端功能修改</li>
-									<li>Java后端和数据库的开发与调试</li>
-								</ul>
-                            </li>
-							<li><mark>[使用技术]</mark><br>
-                            		Java Web、MVC、Oracle、JQuery、HTML、CSS
-                            </li>
-                        </ul>
-                    </li>
-                                   </ul>
-            </section>
-
-            <!-- 自我评价 -->
-            <section class="work info-unit">
-                <h2>
-                    <i class="fa fa-pencil" aria-hidden="true"></i>自我评价</h2>
-                <hr/>
-                <p>
-				有耐心，喜欢琢磨技术的过程，乐于和别人探讨问题，喜欢电子产品、运动、逛虎扑步行街、收集破解版软件
-                </p>
-            </section>
-        </section>
-    </article>
-
-
-
+<div id='write'  class=''><h3 id='个人信息'><span>个人信息</span></h3><p><strong><span>姓名</span></strong><span>：高礼杰</span><span>				</span><span> </span><span>		</span><strong><span>民族</span></strong><span>：汉</span><span>				</span><img align="right"  width = "95" height = "120" alt="照片" src="./蓝底.jpg"/></p><p><strong><span>出生年月</span></strong><span>：1998.09                   </span><span>		</span><strong><span>籍贯</span></strong><span>：江苏扬州</span></p><p><strong><span>电话</span></strong><span>：15050795520</span><span>				</span><strong><span>邮箱</span></strong><span>：</span><a href='mailto:1213931354@qq.com' target='_blank' class='url'>1213931354@qq.com</a></p><p><strong><span>个人主页</span></strong><span>：</span><a href='https://yzglj.eu.org'><span>yzglj.eu.org</span></a><span>			</span><strong><span>CSDN</span></strong><span>：</span><a href='https://blog.csdn.net/u014292402'><span>blog.csdn.net/u014292402</span></a><span> (搜:小杰s)</span></p><hr /><h3 id='教育背景'><span>教育背景</span></h3><p><strong><span>学历</span></strong><span>：硕士研究生 </span><span>										</span><strong><span>学校</span></strong><span>：青岛理工大学</span>
+<strong><span>在读时间</span></strong><span>：2020.09 - 2023.06</span><span>								</span><strong><span>专业</span></strong><span>：电子信息</span></p><p><strong><span>学历</span></strong><span>：本科</span><span>												</span><strong><span>学校</span></strong><span>：南通大学</span>
+<strong><span>在读时间</span></strong><span>：2016.09 - 2020.06</span><span>								</span><strong><span>专业</span></strong><span>：网络工程</span></p><hr /><h3 id='个人技能'><span>个人技能</span></h3><ul><li><p><span>熟悉Java、MySQL、SpringBoot，了解SpringCloud</span></p></li><li><p><span>熟悉Linux操作，熟悉docker、git相关操作</span></p></li><li><p><span>熟悉Fisco-Bcos区块链，熟悉Solidity智能合约开发</span></p></li></ul><hr /><h3 id='公司经历'><span>公司经历</span></h3><p><strong><span>公司</span></strong><span>：海创链(青岛)信息科技有限公司 </span><span>				</span><strong><span>时间</span></strong><span>：2021.08 - 2022.09 &amp; 2023.06 - 至今 </span></p><p><strong><span>公司</span></strong><span>：中科苏州智能计算技术研究院(实习) </span><span>			</span><strong><span>时间</span></strong><span>：2022.12 - 2023.04 </span></p><hr /><h3 id='项目经历'><span>项目经历</span></h3><ol start='' ><li><p><strong><span>项目名称</span></strong><span>：链上存证系统 </span>
+<strong><span>参与时间</span></strong><span>：2021.08-至今</span>
+<strong><span>使用技术</span></strong><span>：SpringBoot、Maven、Gradle、MySQL、Solidity、Shell</span>
+<strong><span>项目描述</span></strong><span>：为山东省公共资源交易中心开发的区块链项目，由省中心和16个地市的服务器组成一个网络，区块链节点运行在省中心和地市的服务器上，主要实现整个山东省政府采购信息的数据链上存证。</span>
+<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><strong><span>开发部分</span></strong><span>：数据存证java后端功能开发、数据批量上链的java后端功能开发、区块链数据</span>
+<span>存证solidity智能合约开发、服务器端一键生成节点的shell脚本编写</span></p></li><li><p><strong><span>运维部分</span></strong><span>：linux服务器环境的搭建与配置、java项目以及区块链节点的部署与维护</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：GasWar游戏</span>
+<strong><span>参与时间</span></strong><span>：2023.06-2023.09</span>
+<strong><span>使用技术</span></strong><span>：SpringBoot、Mybatis Plus、MySQL</span>
+<strong><span>项目描述</span></strong><span>：一个运行在telegram bot上的web3游戏，玩家拥有坦克，进行刷图，根据刷图的收益进行排行，排名高可获得额外奖励。玩家可以在市场购买、交易坦克盲盒。用户可以自行合成高等级的坦克以获得更高的刷图收益。</span>
+<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><span>盲盒市场中盲盒列表、市场上架和下架、盲盒的买卖功能开发</span></p></li><li><p><span>钱包功能开发，游戏币GWCoin的充值与提现</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：区块链管理平台 </span>
+<strong><span>参与时间</span></strong><span>：2022.12-2023.04</span>
+<strong><span>使用技术</span></strong><span>：SpringBoot、Maven、MyBatis Plus、MySQL、Shell</span>
+<strong><span>项目描述</span></strong><span>：一个针对区块链的可视化管理平台，可以浏览链上的区块、交易信息，对节点、组织进行新增删除的管理操作。</span>
+<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><strong><span>开发部分</span></strong><span>：平台用户管理模块开发、节点生成java后端模块开发、节点生成shell脚本的编写</span></p></li><li><p><strong><span>运维部分</span></strong><span>：负责平台与区块链节点的 docker 部署，编写相应的 dockerFile</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：基于区块链的医疗电子票据报销系统 </span>
+<strong><span>比赛名称</span></strong><span>：2021华为区块链高校大赛</span>
+<strong><span>参与时间</span></strong><span>：2021.04-2021.07</span>
+<strong><span>使用技术</span></strong><span>：Java、华为区块链、NodeJS</span>
+<strong><span>项目描述</span></strong><span>：链上有医院、政府、银行三类机构节点。患者可以注册账号，就诊后由医院开出账单，账单上链存储，同时政府确认患者是否有缴纳医保，根据账单按照患者缴纳的医保等级确认报销费用，确认完成后由银行将报销的费用交付到患者的银行账户上，同时链上记录本次报销完成。数据上链确保数据不会被篡改，无法伪造票据，报销后记录链上所有节点都可查，避免一票多报的情况。</span>
+<strong><span>主要负责</span></strong><span>： </span></p><ul><li><p><span>项目组织架构的设计与划分</span></p></li><li><p><span>Java后端功能和智能合约链码功能的开发</span></p></li></ul></li></ol><hr /><h3 id='证书及荣誉'><span>证书及荣誉</span></h3><ul><li><p><strong><span>专利</span></strong><span>：面向多源数据库的区块链海量数据存证系统及存证方法（专利号 ZL 2022 1 1365183.8）</span></p></li><li><p><strong><span>英语</span></strong><span>：CET-6</span></p></li><li><p><strong><span>比赛</span></strong><span>：2021 华为区块链高校大赛最佳商业模型奖</span></p></li></ul><hr /><h3 id='自我评价'><span>自我评价</span></h3><ol start='' ><li><p><span>思维严谨，有较强的独立学习、执行能力</span></p></li><li><p><span>有良好的沟通能力，组织协调能力，具有很强的团队协作意识</span></p></li><li><p><span>热爱计算机行业，喜欢学习技术的过程</span></p></li></ol></div></div>
     <footer class="footer">
         <p>© 2022 长风  yzglj.eu.org </p>   
     </footer>
-
-    <!-- 侧栏 -->
-    <aside>
-    </aside>
-
-    <script src="./assets/js/index.js"></script>
 </body>
-
 </html>
