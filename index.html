@@ -3,11 +3,11 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -163,7 +163,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
 @media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
@@ -203,6 +203,20 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
 mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
 :root {
@@ -558,6 +572,10 @@ header, .context-menu, .megamenu-content, footer{
     background-color: var(--side-bar-bg-color);
 }
 
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
 .md-lang {
     color: #b4654d;
 }
@@ -590,44 +608,46 @@ header, .context-menu, .megamenu-content, footer{
 }
 
 .footer {
-  width: 100%;
-  margin-top: 1rem;
-  height: 2rem; }
-  .footer p {
+    width: 100%;
+    margin-top: 1rem;
+    height: 2rem; 
+}
+
+.footer p {
     line-height: 2rem;
     text-align: center;
-    font-size: 0.8rem; }
+    font-size: 0.8rem; 
+}
 
 
-
+</style>
 </style><title>长风的个人简历</title>
 </head>
 <body onContextMenu="alert('嘿，我看到你了！'); return false" NOOP="if (window.event != null && window.event.button == 2) alert ('Thanks...');">
 <body class='typora-export os-windows'><div class='typora-export-content'>
 
 	<embed src="./asset/1.mp3" autostart="true" loop="true" hidden="true"></embed>
-    <header class="header">
-
-    </header>
-<div id='write'  class=''><h3 id='个人信息'><span>个人信息</span></h3><p><strong><span>姓名</span></strong><span>：高礼杰</span><span>				</span><span> </span><span>				</span><strong><span>民族</span></strong><span>：汉</span><span>				</span><img align="right"  width = "95" height = "120" alt="照片" src="https://glj520.eu.org/file/ad16ec562e74d9d9ca0f1.jpg"/></p><p><strong><span>出生年月</span></strong><span>：1998.09                   </span><strong><span>籍贯</span></strong><span>：江苏扬州</span></p><p><strong><span>电话</span></strong><span>：15050795520</span><span>				</span><strong><span>邮箱</span></strong><span>：</span><a href='mailto:1213931354@qq.com' target='_blank' class='url'>1213931354@qq.com</a></p><p><strong><span>个人主页</span></strong><span>：</span><a href='https://yzglj.eu.org'><span>yzglj.eu.org</span></a><span>			</span><strong><span>CSDN</span></strong><span>：</span><a href='https://blog.csdn.net/u014292402'><span>blog.csdn.net/u014292402</span></a><span> (搜:小杰s)</span></p><hr /><h3 id='教育背景'><span>教育背景</span></h3><p><strong><span>学历</span></strong><span>：硕士研究生（非全日制）</span><span>							</span><strong><span>学校</span></strong><span>：青岛理工大学</span>
-<strong><span>在读时间</span></strong><span>：2020.09 - 2023.06</span><span>								</span><strong><span>专业</span></strong><span>：电子信息</span></p><p><strong><span>学历</span></strong><span>：本科（全日制）</span><span>											</span><strong><span>学校</span></strong><span>：南通大学</span>
-<strong><span>在读时间</span></strong><span>：2016.09 - 2020.06</span><span>								</span><strong><span>专业</span></strong><span>：网络工程</span></p><hr /><h3 id='个人技能'><span>个人技能</span></h3><ul><li><p><span>熟悉Java、MySQL、SpringBoot，了解SpringCloud</span></p></li><li><p><span>熟悉Linux操作，熟悉docker、git相关操作，了解shell脚本语法</span></p></li><li><p><span>熟悉Fisco-Bcos区块链，熟悉Solidity智能合约开发</span></p></li></ul><hr /><h3 id='公司经历'><span>公司经历</span></h3><p><strong><span>公司</span></strong><span>：海创链(青岛)信息科技有限公司 </span><span>					</span><strong><span>时间</span></strong><span>：2021.08 - 2022.09 &amp; 2023.06 - 2024.06 </span></p><p><strong><span>公司</span></strong><span>：中科苏州智能计算技术研究院(实习) </span><span>			</span><strong><span>时间</span></strong><span>：2022.12 - 2023.04 </span></p><hr /><h3 id='项目经历'><span>项目经历</span></h3><ol start='' ><li><p><strong><span>项目名称</span></strong><span>：山东省公共资源交易中心数据安全保固加密系统 </span>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h3 id='个人信息'><span>个人信息</span></h3><p><strong><span>姓名</span></strong><span>：高礼杰                                   </span><strong><span>民族</span></strong><span>：汉</span><span>				</span><img align="right"  width = "85" height = "120" alt="照片" src="./asset/两寸蓝底.png"/></p><p><strong><span>出生年月</span></strong><span>：1998.09                         </span><strong><span>籍贯</span></strong><span>：江苏扬州</span></p><p><strong><span>电话</span></strong><span>：15050795520                       </span><strong><span>邮箱</span></strong><span>：</span><a href='mailto:1213931354@qq.com' target='_blank' class='url'>1213931354@qq.com</a></p><p><strong><span>个人主页</span></strong><span>：</span><a href='https://yzglj.eu.org'><span>yzglj.eu.org</span></a><span>                   </span><strong><span>CSDN</span></strong><span>：</span><a href='https://blog.csdn.net/u014292402'><span>blog.csdn.net/u014292402</span></a><span> (搜:小杰s)</span></p><hr /><h3 id='教育背景'><span>教育背景</span></h3><p><strong><span>学历</span></strong><span>：硕士研究生（非全日制）                                        </span><strong><span>学校</span></strong><span>：青岛理工大学</span>
+<strong><span>在读时间</span></strong><span>：2020.09 - 2023.06                                           </span><strong><span>专业</span></strong><span>：电子信息</span></p><p><strong><span>学历</span></strong><span>：本科（全日制）                                                        </span><strong><span>学校</span></strong><span>：南通大学</span>
+<strong><span>在读时间</span></strong><span>：2016.09 - 2020.06                                            </span><strong><span>专业</span></strong><span>：网络工程</span></p><hr /><h3 id='个人技能'><span>个人技能</span></h3><ul><li><p><span>熟悉Java、MySQL、SpringBoot，了解SpringCloud</span></p></li><li><p><span>熟悉Linux操作，熟悉docker、git相关操作，了解shell脚本语法</span></p></li><li><p><span>熟悉Fisco-Bcos区块链，熟悉Solidity智能合约开发</span></p></li></ul><hr /><h3 id='公司经历'><span>公司经历</span></h3><p><strong><span>公司</span></strong><span>：海创链(青岛)信息科技有限公司                              </span><strong><span>时间</span></strong><span>：2021.08 - 2022.09 &amp; 2023.06 - 2024.06 </span></p><p><strong><span>公司</span></strong><span>：中科苏州智能计算技术研究院（实习）                 </span><strong><span>时间</span></strong><span>：2022.12 - 2023.04 </span></p><hr /><h3 id='项目经历'><span>项目经历</span></h3><ol start='' ><li><p><strong><span>项目名称</span></strong><span>：</span><strong><span>山东省公共资源交易中心数据安全保固加密系统</span></strong><span> </span>
 <strong><span>参与时间</span></strong><span>：2021.08 - 2022.09 &amp; 2023.06 - 至今</span>
 <strong><span>使用技术</span></strong><span>：SpringBoot、MySQL、Solidity、Shell、Fisco Bcos</span>
-<strong><span>项目描述</span></strong><span>：为山东省公共资源交易中心开发的区块链项目，由省中心和16个地市的服务器组成一个网络，区块链节点运行在省中心和地市的服务器上，实现山东全省政府采购相关信息的数据链上存证。</span>
-<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><strong><span>开发部分</span></strong><span>：政府交易相关数据存证功能开发；多源数据库数据批量上链存证功能开发；区块链数据存证solidity智能合约开发；服务器端一键生成节点的shell脚本编写；区块链管理后台部分代码重构</span></p></li><li><p><strong><span>运维部分</span></strong><span>：内网环境下linux服务器运行环境的搭建、java项目以及区块链节点的部署与维护、接口性能监控服务skywalking部署</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：GasWar游戏</span>
+<strong><span>项目描述</span></strong><span>：为山东省公共资源交易中心开发的区块链存证项目，由省中心和16个地市的服务器组成一个网络，区块链节点运行在省中心和地市的服务器上，实现山东全省的政府采购相关信息的数据链上存证，保障数据可信。</span>
+<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><strong><span>开发部分</span></strong><span>：政府交易相关数据存证功能开发；多源数据库数据批量上链存证功能开发；区块链数据存证solidity智能合约开发；服务器端一键生成节点的shell脚本编写；区块链管理后台部分代码重构</span></p></li><li><p><strong><span>运维部分</span></strong><span>：内网环境下linux服务器运行环境的搭建、java项目以及区块链节点的部署与维护、接口性能监控服务skywalking部署</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：</span><strong><span>GasWar游戏</span></strong>
 <strong><span>参与时间</span></strong><span>：2023.06 - 2023.09</span>
 <strong><span>使用技术</span></strong><span>：SpringBoot、Mybatis Plus、MySQL</span>
 <strong><span>项目描述</span></strong><span>：一个运行在telegram bot上的web3游戏，玩家拥有坦克，进行刷图，根据刷图收益进行排行，排名高可获得额外奖励。玩家可以在盲盒市场购买、交易坦克盲盒。玩家可以将低级坦克合成更高等级的坦克，以获得更高的刷图收益。</span>
-<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><span>盲盒市场中盲盒列表；市场上架和下架；盲盒的买卖功能开发</span></p></li><li><p><span>钱包功能开发、游戏币GWCoin的充值与提现</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：区块链管理平台 </span>
+<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><span>盲盒市场中盲盒列表；市场上架和下架；盲盒的买卖功能开发</span></p></li><li><p><span>钱包功能开发、游戏币GWCoin的充值与提现</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：</span><strong><span>区块链管理平台</span></strong><span> </span>
 <strong><span>参与时间</span></strong><span>：2022.12 - 2023.04</span>
 <strong><span>使用技术</span></strong><span>：SpringBoot、MyBatis Plus、MySQL、Shell</span>
 <strong><span>项目描述</span></strong><span>：一个针对区块链的可视化管理平台，可以浏览链上的区块、交易信息，对节点、组织进行新增删除的管理操作。</span>
-<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><strong><span>开发部分</span></strong><span>：平台用户管理模块开发；区块链节点一键生成功能模块开发；节点生成shell脚本的编写</span></p></li><li><p><strong><span>运维部分</span></strong><span>：负责平台与区块链节点的 docker 部署；制作docker镜像，实现通过docker命令即可快速构建区块链节点；对象存储服务Minio部署</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：基于区块链的医疗电子票据报销系统 </span>
+<strong><span>主要负责</span></strong><span>：</span></p><ul><li><p><strong><span>开发部分</span></strong><span>：平台用户管理模块开发；区块链节点一键生成功能模块开发；节点生成shell脚本的编写</span></p></li><li><p><strong><span>运维部分</span></strong><span>：负责平台与区块链节点的 docker 部署；制作docker镜像，实现通过docker命令即可快速构建区块链节点；对象存储服务Minio部署</span></p></li></ul></li><li><p><strong><span>项目名称</span></strong><span>：</span><strong><span>基于区块链的医疗电子票据报销系统</span></strong><span> </span>
 <strong><span>比赛名称</span></strong><span>：2021华为区块链高校大赛</span>
 <strong><span>参与时间</span></strong><span>：2021.04 - 2021.07</span>
 <strong><span>使用技术</span></strong><span>：Java、华为区块链、NodeJS</span>
-<strong><span>项目描述</span></strong><span>：链上有医院、政府、银行三类机构节点。患者可以注册账号，就诊后由医院开出账单，账单上链存储，同时政府确认患者是否有缴纳医保，根据账单按照患者缴纳的医保等级确认报销费用，确认完成后由银行将报销的费用交付到患者的银行账户上，同时链上记录本次报销完成。数据上链确保数据不会被篡改，无法伪造票据，报销后记录链上所有节点都可查，避免一票多报的情况。</span>
+<strong><span>项目描述</span></strong><span>：链上有医院、政府、银行三类机构节点。患者注册就诊后由医院开出账单，账单上链存储，政府的智能合约自动确认患者的医保信息，根据账单按照患者缴纳的医保等级确认报销费用，确认后由银行将报销的费用交付到患者的银行账户，同时链上记录本次报销完成。数据上链确保数据不会被篡改，无法伪造票据，报销后记录链上所有节点都可查，避免一票多报的情况。</span>
 <strong><span>主要负责</span></strong><span>： </span></p><ul><li><p><span>项目组织架构的设计与划分</span></p></li><li><p><span>报销全流程的后端功能和智能合约链码的开发</span></p></li></ul></li></ol><hr /><h3 id='证书及荣誉'><span>证书及荣誉</span></h3><ul><li><p><strong><span>专利</span></strong><span>：面向多源数据库的区块链海量数据存证系统及存证方法（专利号 ZL 2022 1 1365183.8）</span></p></li><li><p><strong><span>英语等级</span></strong><span>：CET-6</span></p></li><li><p><strong><span>比赛经历</span></strong><span>：2021 华为区块链高校大赛最佳商业模型奖</span></p></li></ul><hr /><h3 id='自我评价'><span>自我评价</span></h3><ol start='' ><li><p><span>思维严谨，有较强的独立学习、执行能力</span></p></li><li><p><span>有良好的沟通能力，组织协调能力，具有很强的团队协作意识</span></p></li><li><p><span>热爱计算机行业，喜欢学习技术的过程</span></p></li></ol></div></div>
     <footer class="footer">
         <p>© 2022 长风  yzglj.eu.org </p>   
